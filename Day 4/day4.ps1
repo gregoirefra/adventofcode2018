@@ -50,7 +50,7 @@ foreach ($events in $dayinput) {
         }
     }
     elseif ($events.Event -eq "falls asleep") {
-        #$guardsTime.$currentGuard += [int]([DateTime]$events.TimeStamp).Minute
+        $guardsTime.$currentGuard += [int]([DateTime]$events.TimeStamp).Minute
         [int]$sleep = ([DateTime]$events.TimeStamp).Minute
     }
     else {
